@@ -1,0 +1,8 @@
+[project]
+name = "tournament-turnaround"
+version = "0.1.0"
+description = "连续赛事场地转换中枢领域契约"
+requires-python = ">=3.11"
+
+[tool.unittest]
+start-directory = "tests"

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "连续赛事场地转换中枢领域事件",
+  "type": "object",
+  "required": [
+    "event_id",
+    "event_type",
+    "aggregate_type",
+    "aggregate_id",
+    "occurred_at",
+    "version",
+    "summary"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "ENTRY_CONFIRMED",
+        "MATCH_SCHEDULED",
+        "RESOURCE_HELD",
+        "MATCH_COMPLETED",
+        "VENUE_RELEASED"
+      ]
+    },
+    "aggregate_type": {
+      "type": "string",
+      "enum": [
+        "tournament",
+        "match",
+        "venue_resource",
+        "turnaround_plan"
+      ]
+    },
+    "aggregate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}

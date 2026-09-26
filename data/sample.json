@@ -1,9 +1,12 @@
 {
-  "event_id": "092504-002-sample-001",
-  "event_type": "ENTRY_CONFIRMED",
-  "aggregate_type": "tournament",
-  "aggregate_id": "tournament_turnaround-001",
-  "occurred_at": "2026-09-24T12:00:00+08:00",
-  "version": 1,
-  "summary": "已登记一条可供联调的领域事实"
+  "event_id": "0927-turnaround-002",
+  "event_type": "PROPOSAL_CONFIRMED",
+  "aggregate_type": "proposal",
+  "aggregate_id": "prop-atp-qr1-court1",
+  "occurred_at": "2026-09-27T18:30:00+08:00",
+  "version": 2,
+  "summary": "值班长确认男子挑战赛资格赛时间承诺，中心场 19:00-20:30 被持有",
+  "payload": {
+    "officer": "atp-duty-1"
+  }
 }

@@ -19,19 +19,46 @@
     "event_type": {
       "type": "string",
       "enum": [
+        "TOURNAMENT_REGISTERED",
+        "RESOURCE_REGISTERED",
         "ENTRY_CONFIRMED",
+        "ENTRY_WITHDRAWN",
+        "ALTERNATE_PROMOTED",
+        "DRAW_STAGE_OPENED",
+        "DRAW_STAGE_LOCKED",
+        "SLOT_FILLED",
+        "SLOT_VACATED",
+        "MATCH_DEPENDENCY_SET",
         "MATCH_SCHEDULED",
-        "RESOURCE_HELD",
+        "MATCH_STARTED",
         "MATCH_COMPLETED",
-        "VENUE_RELEASED"
+        "SCHEDULE_REVISED",
+        "PROPOSAL_SUBMITTED",
+        "PROPOSAL_CONFIRMED",
+        "PROPOSAL_REJECTED",
+        "PROPOSAL_EXPIRED",
+        "PROPOSAL_SUPERSEDED",
+        "RESOURCE_HELD",
+        "VENUE_RELEASED",
+        "WAITLIST_JOINED",
+        "WAITLIST_ADVANCED",
+        "EQUIPMENT_DOWN",
+        "EQUIPMENT_RESTORED",
+        "PLAYER_MOVEMENT_RECORDED",
+        "CONFIG_TRANSITION_RECORDED",
+        "INSPECTION_COMPLETED"
       ]
     },
     "aggregate_type": {
       "type": "string",
       "enum": [
         "tournament",
+        "roster",
+        "draw",
         "match",
         "venue_resource",
+        "proposal",
+        "player",
         "turnaround_plan"
       ]
     },
@@ -50,6 +77,9 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "payload": {
+      "type": "object"
     }
   },
   "additionalProperties": true

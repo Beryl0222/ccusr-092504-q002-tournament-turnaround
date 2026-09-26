@@ -20,9 +20,28 @@
       "type": "string",
       "enum": [
         "ENTRY_CONFIRMED",
+        "ENTRY_WITHDRAWN",
+        "ENTRY_REPLACED",
+        "TOURNAMENT_REGISTERED",
+        "DRAW_STAGE_SET",
         "MATCH_SCHEDULED",
-        "RESOURCE_HELD",
+        "MATCH_STARTED",
         "MATCH_COMPLETED",
+        "MATCH_SCORE_RECORDED",
+        "PLAYER_MOVEMENT_LOCKED",
+        "TRAINING_REQUESTED",
+        "RESOURCE_REGISTERED",
+        "RESOURCE_HELD",
+        "RESOURCE_CONFIRMED",
+        "RESOURCE_RELEASED",
+        "WAITLIST_JOINED",
+        "WAITLIST_ADVANCED",
+        "DEADLINE_SET",
+        "VENUE_CONFIG_PREPARED",
+        "VENUE_CONFIG_CHECKED",
+        "ROOF_EQUIPMENT_STATUS",
+        "SHIFT_PUBLISHED",
+        "SECURITY_ZONE_ASSIGNED",
         "VENUE_RELEASED"
       ]
     },
@@ -32,7 +51,14 @@
         "tournament",
         "match",
         "venue_resource",
-        "turnaround_plan"
+        "turnaround_plan",
+        "entry",
+        "draw",
+        "training_request",
+        "config_change",
+        "equipment",
+        "shift",
+        "security_zone"
       ]
     },
     "aggregate_id": {

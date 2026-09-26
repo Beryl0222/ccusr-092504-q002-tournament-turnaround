@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from tournament_turnaround.contracts import validate_event
+from tournament_turnaround.events import AGGREGATE_TYPES, EVENT_TYPES
 
 
 class ContractTests(unittest.TestCase):
@@ -36,6 +37,14 @@ class ContractTests(unittest.TestCase):
         payload = dict(self.sample, event_type="UNKNOWN")
         issues = validate_event(payload, self.schema)
         self.assertEqual([("event_type", "unsupported_value")], [(item.field, item.code) for item in issues])
+
+    def test_registered_event_types_match_schema(self) -> None:
+        schema_types = set(self.schema["properties"]["event_type"]["enum"])
+        self.assertEqual(schema_types, set(EVENT_TYPES))
+
+    def test_registered_aggregate_types_match_schema(self) -> None:
+        schema_types = set(self.schema["properties"]["aggregate_type"]["enum"])
+        self.assertEqual(schema_types, set(AGGREGATE_TYPES))
 
 
 if __name__ == "__main__":
